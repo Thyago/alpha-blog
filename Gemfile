@@ -8,6 +8,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.4'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -42,11 +43,12 @@ group :development, :test do
   gem 'byebug', platform: :mri
 end
 
-#Added for working on Heroku
+#Added for working on Heroku (remember to run "bundle install --without production" before sending to heroku)
 group :production do
   gem 'pg' #postgres
   gem 'rails_12factor'
 end
+
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
