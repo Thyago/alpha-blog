@@ -22,6 +22,6 @@ test:
 
 production:
   adapter: postgresql
-  database: production
-  pool: 5
-  timeout: 5000
+  host: localhost
+  username: user
+  database: app-dev
