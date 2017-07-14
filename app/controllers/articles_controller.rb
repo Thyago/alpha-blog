@@ -11,8 +11,16 @@ class ArticlesController < ApplicationController
   end
 
   def create
+    #debugger #ctrl+d jump it on console / n goes to the next line
+
     #render plain: params[:article].inspect
     @article = Article.new(article_params)
+    @article.user = User.first
+    if (@article.user.nil?)
+      user = User.create(username: "Thyago", email: "thyagotc@gmail.com")
+      user.save
+      @article.user = user
+    end
     if @article.save
       flash[:success] = "Article was successfully created"
       redirect_to article_path(@article)

@@ -42,7 +42,8 @@ group :development, :test do
   gem 'sqlite3'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
+  gem 'byebug', github: 'deivid-rodriguez/byebug', branch: 'master'
+  #gem 'byebug', platform: [:mri, :mingw, :x64_mingw] #platform required when running on windows
 end
 
 #Added for working on Heroku (remember to run "bundle install --without production" before sending to heroku)
