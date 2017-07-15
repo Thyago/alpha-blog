@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
 
   resources :articles #create crud paths (check rake routes on console)
+
+  get 'signup', to: 'users#new'
+  post 'users', to: 'users#create' # or resources :users, except: [:new]
 end
